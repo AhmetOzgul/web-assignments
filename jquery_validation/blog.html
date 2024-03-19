@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmet Özgül</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .footer-buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .footer-buttons .social-links a {
+      font-size: 2rem;
+      color: white;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Ahmet Özgül</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Ana Sayfa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Hakkımda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projeler</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">İletişim</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <section id="about" class="container-fluid mx-auto mt-4" style="max-width: 50rem">
+    <h1>Hakkımda</h1>
+    <p>Ben Ahmet Özgül. 20 yaşındayım. Ondokuz Mayıs Üniversitesi Bilgisayar Mühendisliği Bölümünde 3. sınıf
+      öğrencisiyim. Yazılımın farklı alanlarını deneyip kendimi geliştirmeyi hedefliyorum. Şu an mobil front-end
+      programlama ile ilgileniyorum.</p>
+  </section>
+
+  <section id="projects" class="container-fluid mx-auto mt-4" style="max-width: 50rem">
+    <h1>Projeler</h1>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Proje 1</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi placeat dolorem labore
+          consectetur exercitationem ipsam quis amet doloremque quia optio quibusdam expedita dolore perferendis ut,
+          quae eum, recusandae tempora ipsa?</p>
+        <a href="#" class="btn btn-secondary">Detaylar</a>
+      </div>
+    </div>
+    <div class="card mt-3">
+      <div class="card-body">
+        <h5 class="card-title">Proje 2</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quas quasi repellendus
+          possimus sequi nulla id! Quos soluta velit quae iure excepturi quasi. Nobis minima aperiam culpa asperiores
+          suscipit molestias.</p>
+        <a href="#" class="btn btn-secondary">Detaylar</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding: 30px;">
+    <div class="container-fluid mx-auto mt-4" style="max-width: 50rem">
+      <h1>İletişim</h1>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">E-Posta</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Mesajınız</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <button type="button" class="btn btn-secondary">Gönder</button>
+    </div>
+  </section>
+
+  <footer class="bg-body-tertiary text-center py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>Tüm hakları saklıdır. &copy; 2024 Ahmet Özgül</p>
+        </div>
+        <div class="col footer-buttons">
+          <div class="social-links mt-3">
+            <a href="https://www.linkedin.com/in/ahmet-ozgul/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/AhmetOzgul" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.instagram.com/royaflex" target="_blank"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
