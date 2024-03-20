@@ -15,7 +15,7 @@
 
 <body>
     <section class="container-fluid mx-auto mt-4" style="max-width: 20rem">
-        <form id="registrationForm" action="sayfa2.html">
+        <form id="registrationForm" action="blog.html">
             <div class="mb-3">
                 <label for="email" class="form-label">E-Posta:</label><br>
                 <input type="email" id="email" name="email" required><br><br>
@@ -51,7 +51,6 @@
                 var password = $('#password').val();
                 var passwordAgain = $('#passwordAgain').val();
 
-                // Basit bir e-posta format kontrolü
                 var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(email)) {
                     alert("Geçerli bir e-posta adresi giriniz.");
