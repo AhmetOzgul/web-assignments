@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en"data-bs-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmet Özgül</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+<style>
+    #progressBar {
+        margin-top: 20px;
+        display: none;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Dosya Yükleme</h2>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="file">Lütfen bir veya daha fazla dosya seçiniz:</label>
+            <input type="file" class="form-control-file" id="file" name="file" multiple>
+        </div>
+        <button type="button" class=""btn btn-secondary" onclick="uploadFiles()">Gönder</button>
+    </form>
+    <div class="progress" id="progressBar">
+        <div class="progress-bar" role="progressbar" style="width: 0%;" id="progressBarInner"></div>
+    </div>
+    <div id="uploadStatus"></div>
+</div>
+
+<script>
+function uploadFiles() {
+    var form = document.getElementById('uploadForm');
+    var formData = new FormData(form);
+    var progressBar = document.getElementById('progressBar');
+    var progressBarInner = document.getElementById('progressBarInner');
+    var uploadStatus = document.getElementById('uploadStatus');
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'upload', true);
+    xhr.upload.onprogress = function(e) {
+        if (e.lengthComputable) {
+            var percentComplete = (e.loaded / e.total) * 100;
+            progressBar.style.display = 'block';
+            progressBarInner.style.width = percentComplete + '%';
+        }
+    };
+
+    xhr.onload = function() {
+        progressBar.style.display = 'none';
+        if (xhr.status === 200) {
+            uploadStatus.innerHTML = 'Yükleme başarıyla tamamlandı.';
+        } else {
+            uploadStatus.innerHTML = 'Yükleme yapılırken hata oluştu. Lütfen tekrar deneyin.';
+        }
+    };
+
+    xhr.send(formData);
+}
+</script>
+</body>
+</html>
